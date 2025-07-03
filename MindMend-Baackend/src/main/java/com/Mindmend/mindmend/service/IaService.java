@@ -1,7 +1,7 @@
 // src/main/java/com/Mindmend/mindmend/service/IaService.java
-package main.java.com.Mindmend.mindmend.service;
+package com.Mindmend.mindmend.service;
 
-import com.yourcompany.mindmend.dto.AnalyzeResult;
+import com.Mindmend.mindmend.dto.AnalyzeResult;
 
 public interface IaService {
     String chat(String message);

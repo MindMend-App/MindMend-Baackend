@@ -1,5 +1,5 @@
 // src/main/java/com/Mindmend/mindmend/store/ConversationStore.java
-package main.java.com.Mindmend.mindmend.store;
+package com.Mindmend.mindmend.store;
 
 import java.util.ArrayList;
 import java.util.List;

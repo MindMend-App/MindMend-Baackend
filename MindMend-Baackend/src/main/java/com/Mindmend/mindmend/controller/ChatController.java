@@ -1,12 +1,14 @@
 // src/main/java/com/Mindmend/mindmend/controller/ChatController.java
-package main.java.com.Mindmend.mindmend.controller;
+package com.Mindmend.mindmend.controller;
 
 import java.util.List;
-import com.yourcompany.mindmend.dto.ChatRequest;
-import com.yourcompany.mindmend.dto.ChatResponse;
-import com.yourcompany.mindmend.dto.AnalyzeResponse;
-import com.yourcompany.mindmend.service.IaService;
-import com.yourcompany.mindmend.store.ConversationStore;
+
+import com.Mindmend.mindmend.dto.AnalyzeResult;
+import com.Mindmend.mindmend.dto.ChatRequest;
+import com.Mindmend.mindmend.dto.ChatResponse;
+import com.Mindmend.mindmend.dto.AnalyzeResponse;
+import com.Mindmend.mindmend.service.IaService;
+import com.Mindmend.mindmend.store.ConversationStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

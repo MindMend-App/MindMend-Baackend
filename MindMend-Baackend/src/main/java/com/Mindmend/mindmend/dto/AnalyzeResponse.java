@@ -1,5 +1,5 @@
 // src/main/java/com/Mindmend/mindmend/dto/AnalyzeResponse.java
-package main.java.com.Mindmend.mindmend.dto;
+package com.Mindmend.mindmend.dto;
 public class AnalyzeResponse {
     private String label;
     private double score;

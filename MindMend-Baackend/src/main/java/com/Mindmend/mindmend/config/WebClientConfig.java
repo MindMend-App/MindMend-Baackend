@@ -1,4 +1,4 @@
-package main.java.com.Mindmend.mindmend.config;
+package com.Mindmend.mindmend.config;
 
 
 import org.springframework.beans.factory.annotation.Value;

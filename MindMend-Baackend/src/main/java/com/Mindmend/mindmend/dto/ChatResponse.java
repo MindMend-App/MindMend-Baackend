@@ -1,5 +1,5 @@
 // src/main/java/com/Mindmend/mindmend/dto/ChatResponse.java
-package main.java.com.Mindmend.mindmend.dto;
+package com.Mindmend.mindmend.dto;
 public class ChatResponse {
     private String reply;
     public ChatResponse() {}

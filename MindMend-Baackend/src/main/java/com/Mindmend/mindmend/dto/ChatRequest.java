@@ -1,5 +1,5 @@
 // src/main/java/com/Mindmend/mindmend/dto/ChatRequest.java
-package main.java.com.Mindmend.mindmend.dto;
+package com.Mindmend.mindmend.dto;
 public class ChatRequest {
     private String message;
     // getters y setters

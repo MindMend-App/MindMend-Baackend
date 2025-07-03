@@ -1,11 +1,11 @@
 // src/main/java/com/Mindmend/mindmend/service/impl/IaServiceImpl.java
-package main.java.com.Mindmend.mindmend.service.impl;
+package com.Mindmend.mindmend.service.impl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.yourcompany.mindmend.dto.AnalyzeResult;
-import com.yourcompany.mindmend.service.IaService;
+import com.Mindmend.mindmend.dto.AnalyzeResult;
+import com.Mindmend.mindmend.service.IaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;

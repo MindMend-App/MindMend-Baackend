@@ -1,5 +1,5 @@
 // src/main/java/com/Mindmend/mindmend/MindmendBackendApplication.java
-package main.java.com.Mindmend.mindmend;
+package com.Mindmend.mindmend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
