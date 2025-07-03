@@ -1,10 +1,12 @@
 com\Mindmend\mindmend\dto\ChatRequest.class
-com\Mindmend\mindmend\service\IaService.class
-com\Mindmend\mindmend\MindmendBackendApplication.class
-com\Mindmend\mindmend\store\ConversationStore.class
 com\Mindmend\mindmend\dto\AnalyzeResult.class
 com\Mindmend\mindmend\controller\ChatController.class
 com\Mindmend\mindmend\config\WebClientConfig.class
+com\Mindmend\mindmend\config\CorsConfig$1.class
+com\Mindmend\mindmend\service\IaService.class
+com\Mindmend\mindmend\MindmendBackendApplication.class
+com\Mindmend\mindmend\store\ConversationStore.class
 com\Mindmend\mindmend\service\impl\IaServiceImpl.class
 com\Mindmend\mindmend\dto\AnalyzeResponse.class
 com\Mindmend\mindmend\dto\ChatResponse.class
+com\Mindmend\mindmend\config\CorsConfig.class
