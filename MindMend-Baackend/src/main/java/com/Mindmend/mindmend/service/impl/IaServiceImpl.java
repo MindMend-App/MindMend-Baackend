@@ -1,14 +1,13 @@
-// src/main/java/com/Mindmend/mindmend/service/impl/IaServiceImpl.java
 package com.Mindmend.mindmend.service.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import com.Mindmend.mindmend.dto.AnalyzeResult;
 import com.Mindmend.mindmend.service.IaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
 public class IaServiceImpl implements IaService {
@@ -21,8 +20,11 @@ public class IaServiceImpl implements IaService {
     }
 
     @Override
-    public String chat(String message) {
-        Map<String, String> body = Map.of("message", message);
+    public String chat(String message, List<String> history) {
+        Map<String, Object> body = new HashMap<>();
+        body.put("message", message);
+        body.put("history", history);
+
         return client.post()
                 .uri("/chat")
                 .bodyValue(body)
@@ -34,8 +36,7 @@ public class IaServiceImpl implements IaService {
 
     @Override
     public AnalyzeResult analyze(List<String> messages) {
-        Map<String, Object> body = new HashMap<>();
-        body.put("messages", messages);
+        Map<String, Object> body = Map.of("messages", messages);
         return client.post()
                 .uri("/analyze")
                 .bodyValue(body)
