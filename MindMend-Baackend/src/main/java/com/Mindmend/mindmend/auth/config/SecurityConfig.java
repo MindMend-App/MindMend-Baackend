@@ -1,11 +1,9 @@
-
 package com.Mindmend.mindmend.auth.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -26,27 +24,32 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                // 1) Habilita CORS y toma la configuración de WebMvcCorsConfig
+                // 1) Habilita CORS con tu configuración de WebMvcCorsConfig
                 .cors(Customizer.withDefaults())
-                // 2) Desactiva CSRF
-                .csrf(CsrfConfigurer::disable)
+                // 2) Desactiva CSRF correctamente
+                .csrf().disable()
                 // 3) Stateless (sin sesiones)
                 .sessionManagement(sm -> sm
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-                // 4) Rutas públicas vs. protegidas
+                // 4) Publica rutas abiertas y protege el resto
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                "/",
+                                "/actuator/health",
                                 "/auth/**",
                                 "/api/chat",
                                 "/api/analyze",
                                 "/v3/api-docs/**",
-                                "/swagger-ui.html", "/swagger-ui/**",
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
                                 "/webjars/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
+                // 5) Añade tu filtro JWT antes del de usuario/password
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+
         return http.build();
     }
 
