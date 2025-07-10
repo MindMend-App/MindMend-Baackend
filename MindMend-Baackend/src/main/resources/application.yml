@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://aws-0-us-east-2.pooler.supabase.com:5432/postgres
+    url: jdbc:postgresql://aws-0-us-east-2.pooler.supabase.com:5432/postgres?sslmode=require
     username: postgres.jzgemhyeegnuhnaeffpj
     password: MindMend
     driver-class-name: org.postgresql.Driver
@@ -24,5 +24,7 @@ app:
   supabase:
     url:     ${SUPABASE_URL:https://jzgemhyeegnuhnaeffpj.supabase.co}
     anon-key: ${SUPABASE_ANON_KEY:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9…}
+
 ia:
-  base-url: ${IA_BASE_URL:http://localhost:8000}
+  base-url: ${IA_BASE_URL}
+
