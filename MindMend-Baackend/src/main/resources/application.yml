@@ -22,9 +22,9 @@ jwt:
 
 app:
   supabase:
-    url:     ${SUPABASE_URL:https://jzgemhyeegnuhnaeffpj.supabase.co}
-    anon-key: ${SUPABASE_ANON_KEY:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9…}
+    url:     https://jzgemhyeegnuhnaeffpj.supabase.co
+    anon-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9…
 
 ia:
-  base-url: ${IA_BASE_URL}
+  base-url: https://mindmend-ia-production.up.railway.app/
 
